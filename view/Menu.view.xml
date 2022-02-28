@@ -1,0 +1,33 @@
+<mvc:View controllerName="rrhh.rrhh.controller.Menu"
+          xmlns="sap.m" 
+          xmlns:mvc="sap.ui.core.mvc"
+		  displayBlock="true">
+<Page id="page" title="{i18n>menuMain}">
+		<content>
+			<Panel id="menu" headerText="{i18n>employees}" expandable="true" expanded="true">
+				<GenericTile 
+                    id="tile1" 
+                    headerImage="sap-icon://add-employee"
+                    class="sapUiTinyMarginBegin sapUiTinyMarginTop" 
+                    press="onCreateEmployee">
+					<TileContent id="createemployee" footer="{i18n>createEmployee}"/>					
+				</GenericTile>
+				<GenericTile 
+                    id="tile2" 
+                    headerImage="sap-icon://employee-lookup" 
+                    class="sapUiTinyMarginBegin sapUiTinyMarginTop" 
+                    press="onShowEmployee">
+					<TileContent id="showemployee" footer="{i18n>showEmployees}"/>								
+				</GenericTile>
+			</Panel>
+            <Panel id="ordersPanel" headerText="{i18n>orders}" expandable="true" expanded="true">
+                <GenericTile id="tilePedidos" headerImage="sap-icon://signature" class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" 
+                            press="onSignOrders">
+                    <TileContent id="TileSignOrders" footer="{i18n>signOrders}">
+                        <ImageContent id="imagesignorder" />
+                    </TileContent>
+                </GenericTile>               
+            </Panel>
+		</content>
+	</Page>
+</mvc:View>
